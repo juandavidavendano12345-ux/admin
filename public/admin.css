@@ -50,3 +50,90 @@ iframe {
   height: 100%;
   border: none;
 }
+
+/* Importa una fuente de Google para un aspecto más moderno y limpio */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* --- Variables y estilos base --- */
+:root {
+  --color-principal: #2c3e50;    /* Azul oscuro para el fondo del sidebar */
+  --color-acento: #3498db;      /* Azul vibrante para acentos */
+  --color-secundario: #ecf0f1;   /* Gris claro para el fondo principal */
+  --color-texto-claro: #f8f9fa;  /* Blanco grisáceo para el texto en fondos oscuros */
+  --color-texto-oscuro: #34495e; /* Azul oscuro para el texto en fondos claros */
+  --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-secundario);
+  color: var(--color-texto-oscuro);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* --- Estilos de la barra lateral (Sidebar) --- */
+.sidebar {
+  width: 250px;
+  background-color: var(--color-principal);
+  color: var(--color-texto-claro);
+  padding: 2rem 1.5rem;
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--color-acento);
+  padding-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: var(--color-texto-claro);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: var(--color-acento);
+  transform: translateX(5px);
+}
+
+/* --- Estilos del contenido principal --- */
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #fff;
+  overflow: hidden; /* Para manejar el desbordamiento del iframe */
+  border-radius: 8px;
+  margin: 1.5rem;
+  box-shadow: var(--sombra-suave);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+}
